@@ -11,13 +11,13 @@ namespace Videojuego
         static void Main(string[] args)
         {
             bool end = false;
-            bool anima = false;
+            //bool anima = false;
             bool vivo = true;
-            bool sepuede = true;
+            //bool sepuede = true;
 
             string tecla = "";
-            string pj = "P";
-            string pj2 = "p";
+            string p = "P";
+            //string pj2 = "p";
             string limite = "█";
 
             int min = 0;
@@ -68,15 +68,16 @@ namespace Videojuego
 
                     if (x == max || y == max || x == min + 1 || y == min + 1)
                     {
-                        sepuede = false;
+                        //sepuede = false;
                         Console.WriteLine(limite);
                     }
                     else if (x != max || y != max || x != min + 1 || y != min + 1)
                     {
-                        sepuede = true;
+                        Console.WriteLine(p);
+                        //sepuede = true;
 
                     }
-                    if (sepuede == true)
+                    /*if (sepuede == true)
                     {
                         if (anima == false)
                         {
@@ -88,7 +89,7 @@ namespace Videojuego
                             Console.WriteLine(pj2);
                             anima = false;
                         }
-                    }
+                    }*/
 
                     tecla = Console.ReadKey().KeyChar.ToString();
                     if (tecla == "w" && y > min + 1 || tecla == "W" && y > min + 1)
@@ -146,6 +147,8 @@ namespace Videojuego
                     }
                     Console.Clear(); algo asi como dibujo
                     Syste.Threading.Thread.Sleep(500); setear para ajustar el "dormir" del while, asi los enemigos no son demasiado rapidos.
+
+                    Hacer clases para mejorar la prolijidad.
                 }
                  */
             }
