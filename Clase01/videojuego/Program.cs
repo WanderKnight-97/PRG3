@@ -14,56 +14,51 @@ namespace Videojuego
             bool anima = false;
             bool vivo = true;
             bool sepuede = true;
+
             string tecla = "";
-            /* 
-             string pj = "(~O3O)~";
-             string pj2 = "(~OwO)~";
-             string limite = "(/O_O)/";
-             string muerte = "(oX_X)o";
-             */
-            string pj = "☺";
-            string pj2 = "☻";
+            string pj = "P";
+            string pj2 = "p";
             string limite = "█";
-           //string muerte = "X";
+
             int min = 0;
             int max = 50;
-            int cantb = max / 4;
-            Random random = new Random();
+            int bCant = max / 4;
+            Random r = new Random();
             int x = max / 2;
             int y = max / 2;
-            int[] xb = new int[cantb];
-            int[] yb = new int[cantb];
-            int randomNumber;
+            int[] bX = new int[bCant];
+            int[] bY = new int[bCant];
+            int randNum;
             int i = 0;
-            string[] bombas = new string[cantb];
-            while (i != cantb)
+            string[] bombas = new string[bCant];
+            while (i != bCant)
             {
-                randomNumber = random.Next(min + 1, max - 1);
-                xb[i] = randomNumber;
-                randomNumber = random.Next(min + 1, max - 1);
-                yb[i] = randomNumber;
-                bombas[i] = "♠";
+                randNum = r.Next(min + 1, max - 1);
+                bX[i] = randNum;
+                randNum = r.Next(min + 1, max - 1);
+                bY[i] = randNum;
+                bombas[i] = "B";
                 i++;
             }
              i = 0;
-            while (i != cantb)
+            while (i != bCant)
             {
-                if (xb[i] == x && yb[i] == y)
+                if (bX[i] == x && bY[i] == y)
                 {
-                    x = random.Next(min + 1, max - 1);
-                    y = random.Next(min + 1, max - 1);
+                    x = r.Next(min + 1, max - 1);
+                    y = r.Next(min + 1, max - 1);
                 }
                 i++;
             }
             Console.SetCursorPosition(0, y + 3);
-            Console.WriteLine("Bienvenido al Juego, use WASD para mover al personaje(☺) y presione x para salir");
+            Console.WriteLine("W A S D para mover al personaje(P). Presione x para salir");
             while (end == false)
             {
 
                 i = 0;
-                while (i != cantb)
+                while (i != bCant)
                 {
-                    Console.SetCursorPosition(xb[i], yb[i]);
+                    Console.SetCursorPosition(bX[i], bY[i]);
                     Console.WriteLine(bombas[i]);
                     i++;
                 }
@@ -117,9 +112,9 @@ namespace Videojuego
                         end = true;
                     }
                     i = 0;
-                    while (i != cantb)
+                    while (i != bCant)
                     {
-                        if (x == xb[i] && y == yb[i])
+                        if (x == bX[i] && y == bY[i])
                         {
                             vivo = false;
                         }
@@ -141,6 +136,18 @@ namespace Videojuego
                 }
                 Console.Clear();
                
+                /*
+                 a tener en cuenta en la creación de enemigos:
+                 while (true)
+                {
+                    if(Console.KeyAvailable)
+                    {
+                        ConsoleKeyInfo cki = Console.ReadKey();
+                    }
+                    Console.Clear(); algo asi como dibujo
+                    Syste.Threading.Thread.Sleep(500); setear para ajustar el "dormir" del while, asi los enemigos no son demasiado rapidos.
+                }
+                 */
             }
                 }
         

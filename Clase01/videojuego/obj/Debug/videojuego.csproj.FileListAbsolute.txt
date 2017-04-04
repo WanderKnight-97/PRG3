@@ -16,3 +16,9 @@ C:\Users\def\Downloads\Clase01\Clase01\videojuego\obj\Debug\videojuego.pdb
 C:\Users\def\Downloads\Clase01\Clase01\videojuego\obj\Debug\Videojuego.csprojResolveAssemblyReference.cache
 C:\Users\def\Downloads\Clase01\Clase01\videojuego\bin\Debug\videojuego.exe
 C:\Users\def\Downloads\Clase01\Clase01\videojuego\bin\Debug\videojuego.pdb
+C:\Users\822\Desktop\PRG3\Clase01\videojuego\bin\Debug\videojuego.exe.config
+C:\Users\822\Desktop\PRG3\Clase01\videojuego\obj\Debug\videojuego.exe
+C:\Users\822\Desktop\PRG3\Clase01\videojuego\obj\Debug\videojuego.pdb
+C:\Users\822\Desktop\PRG3\Clase01\videojuego\bin\Debug\videojuego.exe
+C:\Users\822\Desktop\PRG3\Clase01\videojuego\bin\Debug\videojuego.pdb
+C:\Users\822\Desktop\PRG3\Clase01\videojuego\obj\Debug\Videojuego.csprojResolveAssemblyReference.cache
