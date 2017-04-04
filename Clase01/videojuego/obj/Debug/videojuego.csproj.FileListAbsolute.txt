@@ -1,0 +1,18 @@
+c:\users\822\documents\visual studio 2015\Projects\Clase01\videojuego\bin\Debug\videojuego.exe.config
+c:\users\822\documents\visual studio 2015\Projects\Clase01\videojuego\bin\Debug\videojuego.exe
+c:\users\822\documents\visual studio 2015\Projects\Clase01\videojuego\bin\Debug\videojuego.pdb
+c:\users\822\documents\visual studio 2015\Projects\Clase01\videojuego\obj\Debug\videojuego.csprojResolveAssemblyReference.cache
+c:\users\822\documents\visual studio 2015\Projects\Clase01\videojuego\obj\Debug\videojuego.exe
+c:\users\822\documents\visual studio 2015\Projects\Clase01\videojuego\obj\Debug\videojuego.pdb
+C:\Users\822\Downloads\Clase01\videojuego\bin\Debug\videojuego.exe.config
+C:\Users\822\Downloads\Clase01\videojuego\bin\Debug\videojuego.exe
+C:\Users\822\Downloads\Clase01\videojuego\bin\Debug\videojuego.pdb
+C:\Users\822\Downloads\Clase01\videojuego\obj\Debug\Videojuego.csprojResolveAssemblyReference.cache
+C:\Users\822\Downloads\Clase01\videojuego\obj\Debug\videojuego.exe
+C:\Users\822\Downloads\Clase01\videojuego\obj\Debug\videojuego.pdb
+C:\Users\def\Downloads\Clase01\Clase01\videojuego\bin\Debug\videojuego.exe.config
+C:\Users\def\Downloads\Clase01\Clase01\videojuego\obj\Debug\videojuego.exe
+C:\Users\def\Downloads\Clase01\Clase01\videojuego\obj\Debug\videojuego.pdb
+C:\Users\def\Downloads\Clase01\Clase01\videojuego\obj\Debug\Videojuego.csprojResolveAssemblyReference.cache
+C:\Users\def\Downloads\Clase01\Clase01\videojuego\bin\Debug\videojuego.exe
+C:\Users\def\Downloads\Clase01\Clase01\videojuego\bin\Debug\videojuego.pdb
