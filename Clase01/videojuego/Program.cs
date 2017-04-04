@@ -149,6 +149,8 @@ namespace Videojuego
                     Syste.Threading.Thread.Sleep(500); setear para ajustar el "dormir" del while, asi los enemigos no son demasiado rapidos.
 
                     Hacer clases para mejorar la prolijidad.
+
+                    ignorar los bin y obj al comitear.
                 }
                  */
             }
