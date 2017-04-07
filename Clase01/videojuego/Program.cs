@@ -29,7 +29,17 @@ namespace Videojuego
             string[] enemies = new string[4];
             int[] eX = new int[enemies.Length];
             int[] eY = new int[enemies.Length];
-            
+
+            /*while (i != bCant)
+            {
+                randNum = r.Next(min + 1, max - 1);
+                bX[i] = randNum;
+                randNum = r.Next(min + 1, max - 1);
+                bY[i] = randNum;
+                bombs[i] = "B";
+                i++;
+            }*/
+            //i = 0;
             for (i = 0; i < bCant; i++)
             {
                 randNum = r.Next(min + 1, max - 1);
@@ -59,12 +69,12 @@ namespace Videojuego
             }
             Console.SetCursorPosition(0, y + 2);
             Console.WriteLine("W A S D para mover a P. Presione x para salir");
-            /*while (end == false)
+            while (end == false)
             {
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo cki = Console.ReadKey();
-                }*/
+                }
                 i = 0;
                 while (i != bCant)
                 {
@@ -131,6 +141,15 @@ namespace Videojuego
                         i++;
                     }
 
+                    i = 0;
+                    while (i != enemies.Length)
+                    {
+                        if (x == eX[i] && y == eY[i])
+                        {
+                            alive = false;
+                        }
+                        i++;
+                    }
                 }
                 Console.Clear();
                 if (alive == false)
@@ -156,7 +175,9 @@ namespace Videojuego
                     }
                     Console.Clear(); algo asi como dibujo
                     Syste.Threading.Thread.Sleep(500); setear para ajustar el "dormir" del while, asi los enemigos no son demasiado rapidos.
-                    
+
+                    Hacer clases para mejorar la prolijidad.
+
                     ignorar los bin y obj al comitear.
                 }
                  */
@@ -164,5 +185,7 @@ namespace Videojuego
         }
 
     }
-    
+
+}
+
 
