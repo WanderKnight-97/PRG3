@@ -28,3 +28,9 @@ C:\Users\18\Desktop\PRG3\Clase01\videojuego\obj\Debug\videojuego.pdb
 C:\Users\18\Desktop\PRG3\Clase01\videojuego\bin\Debug\videojuego.exe
 C:\Users\18\Desktop\PRG3\Clase01\videojuego\bin\Debug\videojuego.pdb
 C:\Users\18\Desktop\PRG3\Clase01\videojuego\obj\Debug\Videojuego.csprojResolveAssemblyReference.cache
+C:\Users\Mica\Desktop\PRG3\Clase01\videojuego\bin\Debug\videojuego.exe.config
+C:\Users\Mica\Desktop\PRG3\Clase01\videojuego\obj\Debug\videojuego.exe
+C:\Users\Mica\Desktop\PRG3\Clase01\videojuego\obj\Debug\videojuego.pdb
+C:\Users\Mica\Desktop\PRG3\Clase01\videojuego\bin\Debug\videojuego.exe
+C:\Users\Mica\Desktop\PRG3\Clase01\videojuego\bin\Debug\videojuego.pdb
+C:\Users\Mica\Desktop\PRG3\Clase01\videojuego\obj\Debug\Videojuego.csprojResolveAssemblyReference.cache

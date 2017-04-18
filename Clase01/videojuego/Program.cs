@@ -18,6 +18,7 @@ namespace Videojuego
             int min = 0;
             int max = 50;
             int bCant = 10;
+            int c = 0;
             Random r = new Random();
             int x = max / 2;
             int y = max / 2;
@@ -85,15 +86,25 @@ namespace Videojuego
 
                 for (i = 0; i < enemies.Length; i++)
                 {
-                    randNum = r.Next(0, 8);
-                    if ((randNum / 2) == 0)
+                    /*randNum = r.Next(0, 8);
+                    if ((randNum / 2) == 0 && eX[i] + 1 != max)
                     {
                         eX[i] += 1;
                     }
-                    else if ((randNum / 2) != 0)
+                    else if ((randNum / 2) != 0 && eX[i] - 1 != min)
+                    {
+                        eX[i] -= 1;
+                    }*/
+
+                    if (c < max && eX[i] +1 != max)
+                    {
+                        eX[i] += 1;
+                    }
+                    else if (c < max / 2 && eX[i] - 1 != min)
                     {
                         eX[i] -= 1;
                     }
+
                     Console.SetCursorPosition(eX[i], eY[i]);
                     Console.WriteLine(enemies[i]);
                 }
@@ -101,35 +112,39 @@ namespace Videojuego
                 Console.SetCursorPosition(x, y);
                 if (alive == true)
                 {
+                    if (Console.KeyAvailable)
+                    {
+                        ConsoleKeyInfo cki = Console.ReadKey();
 
-                    if (x == max || y == max || x == min + 1 || y == min + 1)
-                    {
-                        Console.WriteLine(limit);
-                    }
-                    else if (x != max || y != max || x != min + 1 || y != min + 1)
-                    {
-                        Console.WriteLine(p);
-                    }
-                    key = Console.ReadKey().KeyChar.ToString();
-                    if (key == "w" && y > min + 1 || key == "W" && y > min + 1)
-                    {
-                        y -= 1;
-                    }
-                    if (key == "s" && y <= max - 1 || key == "S" && y <= max - 1)
-                    {
-                        y += 1;
-                    }
-                    if (key == "a" && x > min + 1 || key == "A" && x > min + 1)
-                    {
-                        x -= 1;
-                    }
-                    if (key == "d" && x <= max - 1 || key == "D" && x <= max - 1)
-                    {
-                        x += 1;
-                    }
-                    if (key == "x" || key == "X")
-                    {
-                        end = true;
+                        if (x == max || y == max || x == min + 1 || y == min + 1)
+                        {
+                            Console.WriteLine(limit);
+                        }
+                        else if (x != max || y != max || x != min + 1 || y != min + 1)
+                        {
+                            Console.WriteLine(p);
+                        }
+                        key = Console.ReadKey().KeyChar.ToString();
+                        if (key == "w" && y > min + 1 || key == "W" && y > min + 1)
+                        {
+                            y -= 1;
+                        }
+                        if (key == "s" && y <= max - 1 || key == "S" && y <= max - 1)
+                        {
+                            y += 1;
+                        }
+                        if (key == "a" && x > min + 1 || key == "A" && x > min + 1)
+                        {
+                            x -= 1;
+                        }
+                        if (key == "d" && x <= max - 1 || key == "D" && x <= max - 1)
+                        {
+                            x += 1;
+                        }
+                        if (key == "x" || key == "X")
+                        {
+                            end = true;
+                        }
                     }
                     i = 0;
                     while (i != bCant)
@@ -151,7 +166,9 @@ namespace Videojuego
                         i++;
                     }
                 }
+                System.Threading.Thread.Sleep(300);
                 Console.Clear();
+
                 if (alive == false)
                 {
                     Console.SetCursorPosition(x, y);
@@ -163,6 +180,11 @@ namespace Videojuego
                         end = true;
                     }
                 }
+                if (c != max)
+                    c++;
+                else
+                    c = 0;
+                
                 Console.Clear();
 
                 /*
