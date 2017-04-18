@@ -8,6 +8,7 @@ namespace Videojuego
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             string key = "";
@@ -30,6 +31,9 @@ namespace Videojuego
             string[] enemies = new string[4];
             int[] eX = new int[enemies.Length];
             int[] eY = new int[enemies.Length];
+            ConsoleKeyInfo userKey;
+            int vidas = 3;
+            
 
             /*while (i != bCant)
             {
@@ -41,7 +45,7 @@ namespace Videojuego
                 i++;
             }*/
             //i = 0;
-            for (i = 0; i < bCant; i++)
+            for (i = 0; i < bCant; i++) 
             {
                 randNum = r.Next(min + 1, max - 1);
                 bX[i] = randNum;
@@ -49,7 +53,7 @@ namespace Videojuego
                 bY[i] = randNum;
                 bombs[i] = "B";
             }
-            for (i = 0; i < enemies.Length; i++)
+            for (i = 0; i < enemies.Length; i++) 
             {
                 randNum = r.Next(min + 1, max - 1);
                 eX[i] = randNum;
@@ -72,11 +76,13 @@ namespace Videojuego
             Console.WriteLine("W A S D para mover a P. Presione x para salir");
             while (end == false)
             {
+                
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo cki = Console.ReadKey();
                 }
                 i = 0;
+              
                 while (i != bCant)
                 {
                     Console.SetCursorPosition(bX[i], bY[i]);
@@ -109,11 +115,31 @@ namespace Videojuego
                     Console.WriteLine(enemies[i]);
                 }
 
+                switch (vidas) //Display de vidas cuadradas
+                {
+                    case 3:
+                        Console.SetCursorPosition(0, 0);
+                        Console.Write("♥♥♥");
+                        break;
+                    case 2:
+                        Console.SetCursorPosition(0, 0);
+                        Console.Write("♥♥");
+                        break;
+                    case 1:
+                        Console.SetCursorPosition(0, 0);
+                        Console.Write("♥");
+                        break;
+                        
+                    default:
+                        break;         
+                }
+
                 Console.SetCursorPosition(x, y);
                 if (alive == true)
                 {
                     if (Console.KeyAvailable)
                     {
+                        
                         ConsoleKeyInfo cki = Console.ReadKey();
 
                         if (x == max || y == max || x == min + 1 || y == min + 1)
@@ -124,34 +150,42 @@ namespace Videojuego
                         {
                             Console.WriteLine(p);
                         }
-                        key = Console.ReadKey().KeyChar.ToString();
-                        if (key == "w" && y > min + 1 || key == "W" && y > min + 1)
+
+                        if (Console.KeyAvailable)
                         {
-                            y -= 1;
+                            userKey = Console.ReadKey(true);
+
+                            switch (userKey.Key)
+                            {
+                                case ConsoleKey.A:
+                                    if (x > 0) x = x - 1;
+                                    break;
+                                case ConsoleKey.D:
+                                    if (x < 78) x = x + 1;
+                                    break;
+                                case ConsoleKey.W:
+                                    if (y > 0) y = y - 1;
+                                    break;
+                                case ConsoleKey.S:
+                                    if (y < 24) y = y + 1;
+                                    break;
+                               /* case ConsoleKey.Spacebar:
+                                    Disparar();
+                                    break;*/
+                                case ConsoleKey.Escape:
+                                    end = true;
+                                    break;
+                            }
                         }
-                        if (key == "s" && y <= max - 1 || key == "S" && y <= max - 1)
-                        {
-                            y += 1;
-                        }
-                        if (key == "a" && x > min + 1 || key == "A" && x > min + 1)
-                        {
-                            x -= 1;
-                        }
-                        if (key == "d" && x <= max - 1 || key == "D" && x <= max - 1)
-                        {
-                            x += 1;
-                        }
-                        if (key == "x" || key == "X")
-                        {
-                            end = true;
-                        }
+
+                      
                     }
                     i = 0;
                     while (i != bCant)
                     {
                         if (x == bX[i] && y == bY[i])
                         {
-                            alive = false;
+                            vidas--;   //Cuando toca una bomba resta una vida
                         }
                         i++;
                     }
@@ -161,12 +195,17 @@ namespace Videojuego
                     {
                         if (x == eX[i] && y == eY[i])
                         {
-                            alive = false;
+                            vidas--; //Cuando toca un enemigo resta una vida
                         }
                         i++;
                     }
+
+                    if (vidas<=0) //Cuando se queda sin vidas, game over
+                    {
+                        alive = false; 
+                    }
                 }
-                System.Threading.Thread.Sleep(300);
+                System.Threading.Thread.Sleep(60);
                 Console.Clear();
 
                 if (alive == false)
