@@ -4,14 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Videojuego
+namespace videojuego
 {
     class Program
     {
         
         static void Main(string[] args)
         {
-            string key = "";
+
+            Game g = new Game();
+            g.Jugar();
+
+
+
+
+            /*string key = "";
             string p = "P";
             string limit = "█";
             bool end = false;
@@ -32,7 +39,7 @@ namespace Videojuego
             int[] eX = new int[enemies.Length];
             int[] eY = new int[enemies.Length];
             ConsoleKeyInfo userKey;
-            int vidas = 3;
+            int vidas = 3;*/
             
 
             /*while (i != bCant)
@@ -45,7 +52,7 @@ namespace Videojuego
                 i++;
             }*/
             //i = 0;
-            for (i = 0; i < bCant; i++) 
+           /* for (i = 0; i < bCant; i++) 
             {
                 randNum = r.Next(min + 1, max - 1);
                 bX[i] = randNum;
@@ -91,7 +98,7 @@ namespace Videojuego
                 }
 
                 for (i = 0; i < enemies.Length; i++)
-                {
+                {*/
                     /*randNum = r.Next(0, 8);
                     if ((randNum / 2) == 0 && eX[i] + 1 != max)
                     {
@@ -102,7 +109,7 @@ namespace Videojuego
                         eX[i] -= 1;
                     }*/
 
-                    if (c < max && eX[i] +1 != max)
+                    /*if (c < max && eX[i] +1 != max)
                     {
                         eX[i] += 1;
                     }
@@ -168,11 +175,11 @@ namespace Videojuego
                                     break;
                                 case ConsoleKey.S:
                                     if (y < 24) y = y + 1;
-                                    break;
+                                    break;*/
                                /* case ConsoleKey.Spacebar:
                                     Disparar();
                                     break;*/
-                                case ConsoleKey.Escape:
+                               /* case ConsoleKey.Escape:
                                     end = true;
                                     break;
                             }
@@ -180,8 +187,8 @@ namespace Videojuego
 
                       
                     }
-                    i = 0;
-                    while (i != bCant)
+                    i = 0;*/
+                   /* while (i != bCant)
                     {
                         if (x == bX[i] && y == bY[i])
                         {
@@ -241,8 +248,8 @@ namespace Videojuego
 
                     ignorar los bin y obj al comitear.
                 }
-                 */
-            }
+                 
+            }*/
         }
 
     }

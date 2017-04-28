@@ -43,9 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bala.cs" />
+    <Compile Include="Bombs.cs" />
+    <Compile Include="Clima.cs" />
+    <Compile Include="Enemies.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="HighScore.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Personaje.cs" />
+    <Compile Include="PickUp.cs" />
+    <Compile Include="PositionSave.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WelcomeMsj.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
