@@ -8,8 +8,8 @@ namespace videojuego
         private ConsoleKeyInfo key;
         public bool GameMenu()
         {
-            /*Clima c = new Clima();
-            c.ShowWeather();*/
+            Clima c = new Clima();
+            c.ShowWeather();
             WelcomeMsj msj = new WelcomeMsj();
             HighScore hs = new HighScore();
             msj.InsertMsj();

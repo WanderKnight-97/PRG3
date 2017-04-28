@@ -26,7 +26,7 @@ namespace videojuego
         Enemies[] enemies = new Enemies[5];
         Bombs[] bombs = new Bombs[5];
         PickUp[] pickUps = new PickUp[5];
-        //Clima clm = new Clima();
+        Clima clm = new Clima();
 
         public void Jugar()
         {
@@ -34,7 +34,7 @@ namespace videojuego
             Random r = new Random();
 
             end = menu.GameMenu();
-            //clm.ShowWeather();
+            clm.ShowWeather();
 
             if (!File.Exists("Position.txt"))
             {

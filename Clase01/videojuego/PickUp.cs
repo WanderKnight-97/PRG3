@@ -10,8 +10,8 @@ namespace videojuego
     {
         int x;
         int y;
-        static int score;
-        string skin = "♠";
+        static int score = 0;
+        char skin = '♠';
         bool taken = false;
 
         public PickUp(int x, int y)
@@ -31,7 +31,7 @@ namespace videojuego
             if (p.GetX() == x && p.GetY() == y && taken == false)
             {
                 taken = true;
-                skin = "";
+                skin = 'x';
                 score++;
             }
         }

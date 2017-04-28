@@ -34,3 +34,5 @@ C:\Users\Mica\Desktop\PRG3\Clase01\videojuego\obj\Debug\videojuego.pdb
 C:\Users\Mica\Desktop\PRG3\Clase01\videojuego\bin\Debug\videojuego.exe
 C:\Users\Mica\Desktop\PRG3\Clase01\videojuego\bin\Debug\videojuego.pdb
 C:\Users\Mica\Desktop\PRG3\Clase01\videojuego\obj\Debug\Videojuego.csprojResolveAssemblyReference.cache
+C:\Users\822\Desktop\PRG3\Clase01\videojuego\bin\Debug\Newtonsoft.Json.dll
+C:\Users\822\Desktop\PRG3\Clase01\videojuego\bin\Debug\Newtonsoft.Json.xml

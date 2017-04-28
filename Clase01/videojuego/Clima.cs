@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.IO;
-//consultar por el include de json.
+using Newtonsoft.Json.Linq;
 
 namespace videojuego
 {
@@ -14,8 +14,8 @@ namespace videojuego
             {
                 WebRequest wbrqst = WebRequest.Create("https://query.yahooapis.com/v1/public/yql?q=select%20item.condition.text%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22buenos%20aires%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys");
                 WebResponse wbrps = wbrqst.GetResponse();
-                Stream thyStream = wbrps.GetResponseStream();
-                StreamReader sReader = new StreamReader(thyStream);
+                Stream stream = wbrps.GetResponseStream();
+                StreamReader sReader = new StreamReader(stream);
                 JObject data = JObject.Parse(sReader.ReadToEnd());
                 w = (string)data["query"]["results"]["channel"]["item"]["condition"]["text"];
                 switch (w)

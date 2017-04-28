@@ -10,14 +10,14 @@ namespace videojuego
     {
         int y;
         int x;
-        string skin;
+        char skin;
         int hp;
 
         public Personaje(int x, int y)
         {
             this.y = y;
             this.x = x;
-            skin = "P";
+            skin = 'P';
             hp = 3;
         }
 
@@ -57,10 +57,10 @@ namespace videojuego
 
         public void SetX(int x) {this.x = x;}
         public void SetY(int y) {this.y = y;}
-        public void SetSkin(string s) {skin = s;}
+        public void SetSkin(char s) {skin = s;}
         public int GetX() {return x;}
         public int GetY() {return y;}
-        public string GetSkin() {return skin;}
+        public char GetSkin() {return skin;}
         public int GetHp() {return hp;}
         public void Damage()
         {

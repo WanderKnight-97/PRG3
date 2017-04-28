@@ -10,7 +10,7 @@ namespace videojuego
     {
         int x;
         int y;
-        string skin = "B";
+        char skin = 'B';
 
         public Bombs(int x, int y)
         {

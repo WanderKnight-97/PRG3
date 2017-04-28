@@ -48,7 +48,7 @@ namespace videojuego
 
         public void ReadHScore()
         {
-            if (File.Exists("HIGHSCOREY.bin"))
+            if (File.Exists("HIGHSCORE.bin"))
             {
                 BinaryReader bReader = new BinaryReader(File.Open("HIGHSCORE.bin", FileMode.Open));
                 Console.Write("HIGHSCORE: " + bReader.ReadString() + " " + bReader.ReadInt32());

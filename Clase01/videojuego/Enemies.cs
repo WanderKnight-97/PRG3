@@ -11,7 +11,7 @@ namespace videojuego
         int x;
         int y;
         int c = 0;
-        string skin = "E";
+        char skin = 'E';
         bool d = true;
 
         public Enemies(int x, int y)
@@ -33,17 +33,19 @@ namespace videojuego
 
         public void Move()
         {
-            /*if (x < 84 && x > 0 && d == true)
-                x++;
-            if (x == 83)
-                d = !;
-            if (x < 84 && x > 0 && d == false)
-                x--;*/
+            
 
-            if (c < 84 && x + 1 != 84)
+            if (x < 84 && x > 0 && d == true)
+                x++;
+            if (x == 83 || x == 1)
+                d =! d;
+            if (x < 84 && x > 0 && d == false)
+                x--;
+
+            /*if (c < 84 && x + 1 != 84)
                 x += 1;
             else if (c < 84 / 2 && x - 1 != 0)
-                x -= 1;
+                x -= 1;*/
         }
         
         public void SetC(int c) { this.c = c; }
