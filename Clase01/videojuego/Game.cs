@@ -122,8 +122,7 @@ namespace videojuego
                 }
 
                 Console.SetCursorPosition(0, 0);
-                Console.WriteLine("Score: " + pickUps[0].GetScore());
-                Console.WriteLine("Vidas restantes: " + p.GetHp());
+                Console.WriteLine("Score: " + pickUps[0].GetScore() + "  Vidas restantes: " + p.GetHp());
                 System.Threading.Thread.Sleep(90);
 
             }

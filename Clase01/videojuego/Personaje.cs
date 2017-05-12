@@ -26,7 +26,7 @@ namespace videojuego
             switch (key.Key)
             {
                 case ConsoleKey.W:
-                    if (y > 0) y--;
+                    if (y > 1) y--;
                     break;
                 case ConsoleKey.S:
                     if (y < 29) y++;
